@@ -1,0 +1,11 @@
+<p>user works!</p>
+<label>Username: </label>
+<input type="text" 
+[(ngModel)]="username"
+(input)="onUserType($event)">
+<p>{{userCreationStatus}}</p>
+<button class="btn btn-primary"
+ [disabled]="!allowNewUser"
+ (click)="onCreateUser()">Add user name</button>
+ <button [disabled]="username === ''"
+ (click)="onResetButton()">Reset</button>
