@@ -1,11 +1,14 @@
-<p>user works!</p>
+<button (click) = "onDetailListButton()">{{button}}</button>
+<p *ngIf="button === 'Hide Details'">Detail list: {{detailList}}</p>
+<p><span [ngStyle]="{color: getColor()}" [ngClass]="{displayPressed: i>= 5}" >Times that display details was press: {{i}}</span></p>
+<!-- <p *ngIf="status">Username is {{username}}</p>
 <label>Username: </label>
 <input type="text" 
 [(ngModel)]="username"
 (input)="onUserType($event)">
-<p>{{userCreationStatus}}</p>
+<p [ngStyle]="{color: getColor()}" [ngClass]="{userCreated: status === true}" *ngFor="let user of userList">{{userList}}</p>
 <button class="btn btn-primary"
  [disabled]="!allowNewUser"
  (click)="onCreateUser()">Add user name</button>
  <button [disabled]="username === ''"
- (click)="onResetButton()">Reset</button>
+ (click)="onResetButton()">Reset</button> -->
